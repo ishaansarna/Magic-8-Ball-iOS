@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var diceImage: UIImageView!
     
-    let ballArray = [#imageLiteral(resourceName: "ball2"),#imageLiteral(resourceName: "ball3"),#imageLiteral(resourceName: "ball5"),#imageLiteral(resourceName: "ball3"),#imageLiteral(resourceName: "ball1")]
+    let ballArray = [#imageLiteral(resourceName: "ball4"),#imageLiteral(resourceName: "ball2"),#imageLiteral(resourceName: "ball1"),#imageLiteral(resourceName: "ball3"),#imageLiteral(resourceName: "ball5")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     @IBAction func askClick(_ sender: Any) {
         randomInt = Int.random(in: 0...4)
         while randomInt == prevRandomInt {
-            randomInt = Int.random(in: 0...4)
+            print ("x")
+            randomInt = Int.random(in: 0..<5)
         }
         diceImage.image = ballArray[randomInt]
         prevRandomInt = randomInt
