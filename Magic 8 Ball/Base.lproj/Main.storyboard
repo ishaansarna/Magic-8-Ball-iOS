@@ -36,6 +36,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="askClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b9y-rn-GgL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
