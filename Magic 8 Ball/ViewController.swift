@@ -19,14 +19,29 @@ class ViewController: UIViewController {
     
     var randomInt = Int.random(in: 0...4)
     var prevRandomInt = -1
-    @IBAction func askClick(_ sender: Any) {
+    
+    func roll() {
         randomInt = Int.random(in: 0...4)
         while randomInt == prevRandomInt {
-            print ("x")
             randomInt = Int.random(in: 0..<5)
         }
-        diceImage.image = ballArray[randomInt]
         prevRandomInt = randomInt
+        diceImage.image = ballArray[randomInt]
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?){
+        if motion == .motionShake {
+            roll()
+        }
+    }
+    
+    
+    @IBAction func askClick(_ sender: Any) {
+        roll()
     }
     
 }
