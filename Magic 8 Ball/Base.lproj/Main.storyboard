@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -14,38 +14,50 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBA-MJ-TTU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="546.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me anything!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESZ-Ht-Cw0">
-                                        <rect key="frame" x="77.666666666666686" y="94.666666666666671" width="259" height="42.000000000000014"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-Mp-azG">
+                                        <rect key="frame" x="0.0" y="242" width="1024" height="62.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me anything!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESZ-Ht-Cw0">
+                                                <rect key="frame" x="382.5" y="0.0" width="259" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wf-Td-RI8">
+                                                <rect key="frame" x="474.5" y="42" width="75" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ESZ-Ht-Cw0" firstAttribute="centerX" secondItem="QBA-MJ-TTU" secondAttribute="centerX" id="e0g-tf-cAz"/>
-                                    <constraint firstItem="ESZ-Ht-Cw0" firstAttribute="centerY" secondItem="QBA-MJ-TTU" secondAttribute="centerY" id="fLN-lY-DkV"/>
+                                    <constraint firstAttribute="trailing" secondItem="lpm-Mp-azG" secondAttribute="trailing" id="Pmz-19-GMY"/>
+                                    <constraint firstItem="lpm-Mp-azG" firstAttribute="centerY" secondItem="QBA-MJ-TTU" secondAttribute="centerY" id="RtT-pq-25N"/>
+                                    <constraint firstItem="lpm-Mp-azG" firstAttribute="leading" secondItem="QBA-MJ-TTU" secondAttribute="leading" id="pdg-zE-PHF"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="2qo-zc-VUX">
-                                <rect key="frame" x="54.666666666666657" y="231" width="305" height="274"/>
+                                <rect key="frame" x="359.5" y="546.5" width="305" height="273.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jx3-I9-f2K">
-                                <rect key="frame" x="0.0" y="505" width="414" height="231"/>
+                                <rect key="frame" x="0.0" y="820" width="1024" height="546"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfO-VW-3FE">
-                                        <rect key="frame" x="132" y="85" width="150" height="61"/>
+                                        <rect key="frame" x="437" y="242.5" width="150" height="61"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" placeholder="YES" id="RwJ-wT-tih"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Roll">
                                             <color key="titleColor" systemColor="systemTealColor"/>
                                         </state>
                                         <connections>
@@ -87,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ball1" width="305" height="273.66665649414062"/>
+        <image name="ball1" width="305" height="273.5"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
